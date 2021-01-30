@@ -199,3 +199,7 @@ input[type="number"] {
   margin: 10px;
   font-weight: 700;
 }
+
+#front-page {
+  margin-top: 20px;
+}
