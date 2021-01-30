@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section Start-->
+    <main>
+        <section id="booking-ticket" class="main-content container">
+            <div class="booking-form">
+                <h3>Booking Flights</h3>
+                <div class="input-group">
+                    <label for="">Flying From</label>
+                    <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+                </div>
+                <div class="input-group">
+                    <label for="">Flying To</label>
+                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                </div>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                </div>
+                <div class="input-group f-class">
+                    <div>
+                        <label  for="" >First Class ( $150 )</label>
+                        <input id="first-class-ticket-count" class="inp-style inp-width" type="number" name="" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <!-- first class ticket increment button -->
+                        <p onclick="ticketList( 'first-class-ticket', true)" id="first-class-ticket-increment">+</p>
+
+                        <!-- first class ticket decrement button -->
+                        <p onclick="ticketList( 'first-class-ticket', false)" id="first-class-ticket-decrement">-</p>
+
+                    </div>
+                </div>
+                
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">Economy ( <span id="economy-ticket-prize">$100</span>)</label>
+                        <input id="economy-ticket-count" class="inp-style inp-width" type="number" name="" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <!-- economy ticket increment button -->
+                        <p onclick="ticketList('economy-ticket', true)" id="economy-ticket-increment">+</p>
+
+                        <!-- economy ticket decrement button -->
+                        <p onclick="ticketList('economy-ticket', false)" id="economy-ticket-decrement">-</p>
+                    </div>
+                </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p id="tickets-prize">$00</p>
+                        </div>
+                    </div>
+
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p id="tickets-vat">$00</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p id="total-ticket-cost">$000</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="book-now" class="btn-style">Book Now</button>
+            </div>
+
+            <div class="booking-content">
+                <h1>discover <br> around the world</h1>
+                <p>Hazrat Shahjalal International Airport is the largest and most prominent international airport in Bangladesh. It is located in Kurmitola, 17 kilometres from the city centre, in the northern part of the capital city Dhaka. Part of it is Bangladesh Air Force Base Bangabandhu. The airport has an area of 802 hectares</p>
+            </div>
+        </section>
+        <!--Booking Section End-->
+
+        <!-- confirmation section start -->
+        <section id="confirmation">
+            <div id="confirmation-content">
+                <h1><i class="fas fa-check-circle"></i></h1>
+                <h2>Successfully Order Tickets</h2>
+                <p>Thank You for select us for your trip . We will give you our best service. We hope you have a safe journey with us & we hope you are so excited for this flight. </p>
+            </div>
+        </section>
+        <!-- confirmation section end -->
+    </main>
+
+    
+    <!-- main js -->
+    <script src="main.js"></script>
+</body>
+
+</html>
