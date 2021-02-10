@@ -35,9 +35,8 @@ function totalTicketPrize() {
 
   const totalTicketCost = totalTicketPrize + totalTicketVat;
   document.getElementById("total-ticket-cost").innerText =
-    "$" + totalTicketCost;
-}
-
+     totalTicketCost;
+};
 // total ticket prize function end
 
 function getInputValue(ticket) {
@@ -49,10 +48,41 @@ function getInputValue(ticket) {
 //prize convert into integer type function end
 
 document.getElementById("book-now").addEventListener("click", function () {
-  const bookingTicket = document.getElementById("booking-ticket");
-  bookingTicket.style.display = "none";
-  const confirmationArea = document.getElementById("confirmation");
-  confirmationArea.style.display = "block";
+  const total = document.getElementById("total-ticket-cost").innerText
+ if(total < 1){
+   alert("You Don't Buy any Tickets");
+ return false;
+}else{
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You will not be able to cancel your!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, Confirm it!',
+      cancelButtonText: "No, I don't Want",
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire(
+          'Order Success!',
+          'Thank You For Select Us For Your Trip . We Will Give You Our Best Service.We hope you have a safe journey with us',
+          'success'
+        )
+      // For more information about handling dismissals please visit
+      // https://sweetalert2.github.io/#handling-dismissals
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire(
+          'Cancelled',
+          'Your Order is Canceled :)',
+          'error'
+        )
+      }
+    })
+  }
+
+  // const bookingTicket = document.getElementById("booking-ticket");
+  // bookingTicket.style.display = "none";
+  // const confirmationArea = document.getElementById("confirmation");
+  // confirmationArea.style.display = "block";
 });
 
 //confirmation section function end
