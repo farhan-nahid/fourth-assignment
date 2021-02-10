@@ -55,7 +55,7 @@ document.getElementById("book-now").addEventListener("click", function () {
 }else{
     Swal.fire({
       title: 'Are you sure?',
-      text: 'You will not be able to cancel your!',
+      text: 'You will not be able to cancel your Order!',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Yes, Confirm it!',
